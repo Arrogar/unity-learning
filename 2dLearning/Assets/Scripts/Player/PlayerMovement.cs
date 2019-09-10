@@ -18,6 +18,7 @@ public class PlayerMovement : MonoBehaviour {
     public LayerMask whatIsGround;
     public AudioSource audioSource;
     public AudioClip jumpAudio;
+    public Animator Animator;
 
     // bool facingRight = false;
     bool isGrounded;
@@ -33,6 +34,9 @@ public class PlayerMovement : MonoBehaviour {
     void Update() {
         if (isGrounded) {
             extraJumps = extraJumpValue;
+            Animator.SetBool("JumpCondition", false);
+        } else {
+            Animator.SetBool("JumpCondition", true);
         }
 
         if (Input.GetKeyDown(KeyCode.Space)) {
