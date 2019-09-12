@@ -44,9 +44,10 @@ public class Interaction : MonoBehaviour {
                 }
             }
 
+            // Trigger pickup picked event
+            Events.TriggerOnPickupPick();
             // Show xp
             pickup.expText.text = pickupLevel.experience.ToString() + " XP";
-
             pickup.statsText.text = statsText;
             // Play destroy sound
             pickupDestroySound.Play();

@@ -22,7 +22,7 @@ public class PlayerMovement : MonoBehaviour {
 
     // bool facingRight = false;
     bool isGrounded;
-
+    public bool isTouchingGround;
 
     void Start() {
         playerRb = GetComponent<Rigidbody2D>();
@@ -53,6 +53,7 @@ public class PlayerMovement : MonoBehaviour {
 
     void FixedUpdate() {
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
+        isTouchingGround = isGrounded;
         horizontalInput = Input.GetAxis("Horizontal");
 
         playerRb.velocity = new Vector2(horizontalInput * stats.speed, playerRb.velocity.y);

@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 33696151}
   - component: {fileID: 33696154}
   - component: {fileID: 33696153}
+  - component: {fileID: 33696152}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Handle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25,14 +26,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 33696150}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.775, y: 1.04, z: 0}
+  m_LocalRotation: {x: 0.024144277, y: 0, z: 0, w: 0.99970853}
+  m_LocalPosition: {x: 0.62, y: 0.964, z: 1.242}
   m_LocalScale: {x: 0.55, y: 0.2125, z: 1}
   m_Children:
   - {fileID: 1501497733}
   m_Father: {fileID: 126396243}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 2.7670002, y: 0, z: 0}
 --- !u!33 &33696154
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -79,6 +80,18 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &33696152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 33696150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25fb579293ee9204692c44ba2b38586d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &126396242
 GameObject:
   m_ObjectHideFlags: 0
@@ -103,7 +116,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 126396242}
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -0.242, y: -1.017, z: -1.362}
+  m_LocalPosition: {x: 1.114, y: -1, z: -1.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 33696151}
@@ -122,7 +135,7 @@ GameObject:
   - component: {fileID: 1501497735}
   - component: {fileID: 1501497734}
   m_Layer: 0
-  m_Name: Sphere
+  m_Name: Bulb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -213,13 +226,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1787498068}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -1.06, y: 0, z: 1.14}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1501497733}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!108 &1787498070
 Light:
   m_ObjectHideFlags: 0
@@ -230,7 +243,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 9
   m_Type: 0
-  m_Color: {r: 1, g: 0.894619, b: 0.5613208, a: 1}
+  m_Color: {r: 0.18823427, g: 0.5536916, b: 0.8867924, a: 1}
   m_Intensity: 30
   m_Range: 3
   m_SpotAngle: 79
@@ -328,9 +341,10 @@ GameObject:
   - component: {fileID: 106749756}
   - component: {fileID: 106749757}
   - component: {fileID: 106749759}
+  - component: {fileID: 2092451156912178224}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -344,7 +358,7 @@ Transform:
   m_GameObject: {fileID: 2092451156833794536}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -3.7, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.2}
   m_Children:
   - {fileID: 2092451156495583302}
   - {fileID: 2092451157009939630}
@@ -377,7 +391,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 19729b128b992064087ebf5013538039, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -418,6 +432,7 @@ MonoBehaviour:
     m_Bits: 256
   audioSource: {fileID: 106749758}
   jumpAudio: {fileID: 8300000, guid: 8e51a563c0d0495408f36f37385ba860, type: 3}
+  Animator: {fileID: 2092451156912178224}
 --- !u!50 &2092451156833794537
 Rigidbody2D:
   serializedVersion: 4
@@ -574,8 +589,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreManager: {fileID: 0}
-  stats: {fileID: 0}
-  currentLevel: {fileID: 0}
+  stats: {fileID: 106749757}
+  currentLevel: {fileID: 106749759}
 --- !u!114 &106749757
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -589,12 +604,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: 0
-  strength: 0
-  agility: 0
+  strength: 1
+  agility: 1
   health: 10
   defense: 0
-  jumpForce: 5.2
-  speed: 1
+  jumpForce: 6
+  speed: 5
 --- !u!114 &106749759
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -613,6 +628,25 @@ MonoBehaviour:
   levelModifier: 1.5
   audioSource: {fileID: 106749758}
   levelUpSound: {fileID: 8300000, guid: b72d5ff3131737046898c754459ca878, type: 3}
+--- !u!95 &2092451156912178224
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2092451156833794536}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a50eee8111f1970448570fe4f8487d3e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2092451157009939538
 GameObject:
   m_ObjectHideFlags: 0
@@ -624,6 +658,7 @@ GameObject:
   - component: {fileID: 2092451157009939630}
   - component: {fileID: 2092451157009939537}
   - component: {fileID: 2092451157009939539}
+  - component: {fileID: 528683130}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -638,13 +673,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2092451157009939538}
-  m_LocalRotation: {x: 0.01745245, y: 0, z: 0, w: 0.99984777}
+  m_LocalRotation: {x: 0.026176924, y: 0, z: 0, w: 0.99965733}
   m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 2092451156833794532}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 2, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 3, y: 0, z: 0}
 --- !u!20 &2092451157009939537
 Camera:
   m_ObjectHideFlags: 0
@@ -655,7 +690,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 1}
+  m_BackGroundColor: {r: 1, g: 1, b: 1, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -696,3 +731,63 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2092451157009939538}
   m_Enabled: 1
+--- !u!114 &528683130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2092451157009939538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 948f4100a11a5c24981795d21301da5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volumeTrigger: {fileID: 2092451157009939630}
+  volumeLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  stopNaNPropagation: 1
+  finalBlitToCameraTarget: 0
+  antialiasingMode: 1
+  temporalAntialiasing:
+    jitterSpread: 0.75
+    sharpness: 0.25
+    stationaryBlending: 0.95
+    motionBlending: 0.85
+  subpixelMorphologicalAntialiasing:
+    quality: 2
+  fastApproximateAntialiasing:
+    fastMode: 0
+    keepAlpha: 0
+  fog:
+    enabled: 1
+    excludeSkybox: 1
+  debugLayer:
+    lightMeter:
+      width: 512
+      height: 256
+      showCurves: 1
+    histogram:
+      width: 512
+      height: 256
+      channel: 3
+    waveform:
+      exposure: 0.12
+      height: 256
+    vectorscope:
+      size: 256
+      exposure: 0.12
+    overlaySettings:
+      linearDepth: 0
+      motionColorIntensity: 4
+      motionGridSize: 64
+      colorBlindnessType: 0
+      colorBlindnessStrength: 1
+  m_Resources: {fileID: 11400000, guid: d82512f9c8e5d4a4d938b575d47f88d4, type: 2}
+  m_ShowToolkit: 1
+  m_ShowCustomSorter: 1
+  breakBeforeColorGrading: 0
+  m_BeforeTransparentBundles: []
+  m_BeforeStackBundles: []
+  m_AfterStackBundles: []
